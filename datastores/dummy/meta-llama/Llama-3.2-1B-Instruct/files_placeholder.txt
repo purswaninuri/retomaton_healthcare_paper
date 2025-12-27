@@ -1,0 +1,5 @@
+Due to size constraints, the following files are not pushed to Github, but can be requested separately. 
+
+./datastores/dummy/meta-llama/Llama-3.2-1B-Instruct/dstore_llama_281325_2048_keys.npy
+./datastores/dummy/meta-llama/Llama-3.2-1B-Instruct/dstore_llama_281325_2048_vals.npy
+./datastores/dummy/meta-llama/Llama-3.2-1B-Instruct/index_llama_281325_2048.indexed

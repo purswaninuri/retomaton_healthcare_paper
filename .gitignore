@@ -1,3 +1,8 @@
+/data/nuri/retomaton_healthcare/datastores/dummy/meta-llama/Llama-3.2-1B-Instruct/dstore_llama_281325_2048_keys.npy
+/data/nuri/retomaton_healthcare/datastores/dummy/meta-llama/Llama-3.2-1B-Instruct/dstore_llama_281325_2048_vals.npy
+/data/nuri/retomaton_healthcare/datastores/dummy/meta-llama/Llama-3.2-1B-Instruct/index_llama_281325_2048.indexed
+./outputs/llama_finetune/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

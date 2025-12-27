@@ -1,2 +1,57 @@
-# retomaton_healthcare_paper
-Consolidated Repository of Experiments for Next-Token Retrieval using the Retomaton &amp; KNNLM Models. Synthetic radiology notes provided as an example, generated using ChatGPT 5.2
+# 🔍 Next-Token Retrieval for Clinical Language Modeling  
+kNN-LM • RETOMATON • FAISS Datastores • Instruction-Tuned Models
+
+The original code for next token retrieval is here, we have adapted it: https://github.com/neulab/knn-transformers 
+
+This repository contains all scripts, environments, and utilities required to:
+- build FAISS-based datastores from clinical notes  
+- run kNN-LM and RETOMATON for domain adaptation of models with next-token retrieval evaluation  
+- fine-tune instruction-tuned models  
+- extract hidden states for large-scale datastore construction  
+
+The workflow is optimized for **clinical NLP**, **privacy-preserving modeling**, and **non-parametric adaptation** using external memory instead of weight updates.
+
+
+
+---
+
+# 📦 1. Environment Setup
+
+The `env_config/` folder provides **three Conda environments**, each dedicated to a specific stage of the workflow.
+
+1. neubig_benchmarks_environment.yml (for evaluation)
+2. neubig_finetune_environment.yml (for supervised finetuning)
+3. neubig_instruct_environment.yml (for next-token retrieval)
+
+
+# 2. Core Scripts
+
+The ./core_scripts folder doesn't need to be modified. Important files include:
+
+retomaton.py  (Retomaton wrapper from Neubig Lab)
+
+knnlm.py (Knnlm wrapper, which retomaton depends on)
+
+run_clm_chat.py (Modified template for causal language modelling with retomaton and knnlm, using the Hugging Face template)
+
+5_all_metrics.py : Evaluation script comparing finetuning, next-token retrieval for different parameter combinations against base models (not finetuned or enhanced with knnlm and retomaton)
+
+
+# 3. Bash Files
+
+run steps 0-5.bash in sequence
+
+0_jsonl_data_prompt_format.bash : Process dummy input data into jsonl format for instruction tuned prompting and finetuning 
+
+1_save_knn_datastore.bash : Save the datastore containing previous/next token sequences (expected size for dummy dataset stored in dummy_datasets of ~280K Key/Val pairs)
+
+2_build_index_base.bash : Build a faiss index from the datastores created in step 1. for next-token retrieval
+
+3_run_sft.bash : Run supervised finetuning
+
+4_run_generations_debug.bash : Generate outputs for retomaton, base models and finetuned models from previous steps
+
+5_run_all_metrics.bash : Evaluate models based on ROUGE-L scores, Perplexity, Hallucination Metrics etc. 
+
+
+
