@@ -58,7 +58,8 @@ run steps 0-5.bash in sequence
 5_run_all_metrics.bash : Evaluate models based on ROUGE-L scores, Perplexity, Hallucination Metrics etc. 
 
 
-#4. Colab files folder:
+# 4. Colab files folder:
+
 Version of the workflow to run on google collab pro+ if environment setup on HPC cluster is difficult. The notebooks use high RAM and 1 L40 NVIDIA-GPU (paid version). The colab version of the code uses FAISS-CPU as FAISS-GPU has set-up problems. 
 
 To run this part, just download the ./colab_files subfolder and upload it to your local google drive. Then, with your file paths it can be ran through colab high RAM + GPU notebooks. Connection to Google Drive must be enabled. 
