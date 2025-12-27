@@ -58,4 +58,5 @@ run steps 0-5.bash in sequence
 5_run_all_metrics.bash : Evaluate models based on ROUGE-L scores, Perplexity, Hallucination Metrics etc. 
 
 
-
+#4. Colab files folder:
+Version of the workflow to run on google collab pro+ if environment setup on HPC cluster is difficult. The notebooks use high RAM and 1 L40 NVIDIA-GPU (paid version). The colab version of the code uses FAISS-CPU as FAISS-GPU has set-up problems. 
