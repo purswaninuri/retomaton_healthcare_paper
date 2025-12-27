@@ -64,7 +64,7 @@ Version of the workflow to run on google collab pro+ if environment setup on HPC
 
 To run this part, just download the ./colab_files subfolder and upload it to your local google drive. Then, with your file paths it can be ran through colab high RAM + GPU notebooks. Connection to Google Drive must be enabled. 
 
-# 5. Citations & Accreditations. 
+# 5. Citations & Accreditations: 
 
 This code was based on prior work from Alon et al. and Khandelwal et al. 
 
