@@ -26,7 +26,7 @@ The `env_config/` folder provides **three Conda environments**, each dedicated t
 3. neubig_instruct_environment.yml (for next-token retrieval)
 
 
-# 2. Core Scripts
+# 2. hpc_workflow: Core Scripts
 
 The ./core_scripts folder doesn't need to be modified. Important files include:
 
@@ -41,7 +41,7 @@ run_clm_chat.py (Modified template for causal language modelling with retomaton 
 5_all_metrics.py : Evaluation script comparing finetuning, next-token retrieval for different parameter combinations against base models (not finetuned or enhanced with knnlm and retomaton) with multiple benchmarks (reference and reference free).
 
 
-# 3. Bash Files
+# 3. hpc_workflow: Bash Files
 
 run steps 0-5.bash in sequence
 
