@@ -1,9 +1,7 @@
 # 🔍 Next-Token Retrieval for Clinical Language Modeling  
 kNN-LM • RETOMATON • FAISS Datastores • Instruction-Tuned Models
 
-# retomaton_healthcare_paper
 Consolidated Repository of Experiments for Next-Token Retrieval using the Retomaton &amp; KNNLM Models. Synthetic radiology notes provided as an example, generated using ChatGPT 5.2
-
 
 The original code for next token retrieval is here, we have adapted it: https://github.com/neulab/knn-transformers 
 
