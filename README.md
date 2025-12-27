@@ -64,11 +64,12 @@ Version of the workflow to run on google collab pro+ if environment setup on HPC
 
 To run this part, just download the ./colab_files subfolder and upload it to your local google drive. Then, with your file paths it can be ran through colab high RAM + GPU notebooks. Connection to Google Drive must be enabled. 
 
-#5. Citations & Accreditations. 
+# 5. Citations & Accreditations. 
 
 This code was based on prior work from Alon et al. and Khandelwal et al. 
 
 Neuro-Symbolic Language Modeling with Automaton-augmented Retrieval: https://arxiv.org/abs/2201.12431
+
 @inproceedings{alon2022neuro,
   title     = {Neuro-Symbolic Language Modeling with Automaton-augmented Retrieval},
   author    = {Alon, Uri and Xu, Frank and He, Junxian and Sengupta, Sudipta and Roth, Dan and Neubig, Graham},
@@ -79,6 +80,7 @@ Neuro-Symbolic Language Modeling with Automaton-augmented Retrieval: https://arx
 }
 
 Generalization through Memorization: Nearest Neighbor Language Models: https://arxiv.org/abs/1911.00172
+
 @inproceedings{khandelwal2020generalization,
   title     = {Generalization through Memorization: Nearest Neighbor Language Models},
   author    = {Khandelwal, Urvashi and Levy, Omer and Jurafsky, Dan and Zettlemoyer, Luke and Lewis, Mike},
