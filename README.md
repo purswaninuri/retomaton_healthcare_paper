@@ -63,3 +63,29 @@ run steps 0-5.bash in sequence
 Version of the workflow to run on google collab pro+ if environment setup on HPC cluster is difficult. The notebooks use high RAM and 1 L40 NVIDIA-GPU (paid version). The colab version of the code uses FAISS-CPU as FAISS-GPU has set-up problems. 
 
 To run this part, just download the ./colab_files subfolder and upload it to your local google drive. Then, with your file paths it can be ran through colab high RAM + GPU notebooks. Connection to Google Drive must be enabled. 
+
+#5. Citations & Accreditations. 
+
+This code was based on prior work from Alon et al. and Khandelwal et al. 
+
+Neuro-Symbolic Language Modeling with Automaton-augmented Retrieval: https://arxiv.org/abs/2201.12431
+@inproceedings{alon2022neuro,
+  title     = {Neuro-Symbolic Language Modeling with Automaton-augmented Retrieval},
+  author    = {Alon, Uri and Xu, Frank and He, Junxian and Sengupta, Sudipta and Roth, Dan and Neubig, Graham},
+  booktitle = {Proceedings of the International Conference on Machine Learning (ICML)},
+  pages     = {468--485},
+  year      = {2022},
+  publisher = {PMLR}
+}
+
+Generalization through Memorization: Nearest Neighbor Language Models: https://arxiv.org/abs/1911.00172
+@inproceedings{khandelwal2020generalization,
+  title     = {Generalization through Memorization: Nearest Neighbor Language Models},
+  author    = {Khandelwal, Urvashi and Levy, Omer and Jurafsky, Dan and Zettlemoyer, Luke and Lewis, Mike},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2020}
+}
+
+If you find this repository useful, please consider starring ⭐ it and citing the papers above. 
+
+Preprint/Citation Link for my article to be updated soon. 
