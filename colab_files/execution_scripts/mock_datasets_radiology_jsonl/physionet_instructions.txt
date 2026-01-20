@@ -1,0 +1,5 @@
+Log into Physionet and download datasets under the Dummy Datasets Folder:
+
+mimic_inspired_test_context_impression-finetune.jsonl   
+mimic_inspired_val_context_impression-finetune.jsonl
+mimic_inspired_train_context_impression-finetune.jsonl
