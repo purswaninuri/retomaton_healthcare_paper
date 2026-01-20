@@ -1,0 +1,7 @@
+Files are available on physionet. 
+
+mimic_inspired_test_context_impression.csv 
+mimic_inspired_train_context_impression.csv
+mimic_inspired_val_context_impression.csv 
+
+jsonl datasets also with prompt templates. 
