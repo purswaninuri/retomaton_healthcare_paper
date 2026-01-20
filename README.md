@@ -1,7 +1,7 @@
 # 🔍 Next-Token Retrieval for Clinical Language Modeling  
 kNN-LM • RETOMATON • FAISS Datastores • Instruction-Tuned Models
 
-Consolidated Repository of Experiments for Next-Token Retrieval using the Retomaton &amp; KNNLM Models. Synthetic radiology notes provided as an example, generated using ChatGPT 5.2
+Consolidated Repository of Experiments for Retrieval-based Language Model using the Retomaton &amp; KNNLM Models. Synthetic radiology notes provided as an example derived from the MIMIC IV Dataset, generated using ChatGPT 5.2 - datasets can be downloaded from Physionet. 
 
 The original code for next token retrieval is here, we have adapted it: https://github.com/neulab/knn-transformers 
 
@@ -14,10 +14,39 @@ This repository contains all scripts, environments, and utilities required to:
 The workflow is optimized for **clinical NLP**, **privacy-preserving modeling**, and **non-parametric adaptation** using external memory instead of weight updates.
 
 
-
 ---
 
-# 📦 1. Environment Setup
+# 0. Pre-requisite: Dataset Downloads from Physionet
+
+Further details on how to access datasets needed for training. 
+
+# 1. Core Scripts (colab workflow) ./colab_workflow/core_scripts: 
+
+The ./core_scripts folder doesn't need to be modified. Important files include:
+
+retomaton.py  (Retomaton wrapper from Neubig Lab)
+
+knnlm.py (Knnlm wrapper, which retomaton depends on)
+
+run_clm_chat.py (Modified template for causal language modelling with retomaton and knnlm, using the Hugging Face template)
+
+4_generations_perplexity_debug3.py : Runs text generations for base models, retomaton and finetuned models and computex perplexity scores.
+
+# 2. Execution Scripts (colab workflow) ./colab_workflow/execution_scripts:
+
+./mock_datasets_radiology_jsonl/ folder: should contain files accessed in step 0. from Physionet in the correct prompt template and format. Specifically, need files: 
+
+mimic_inspired_test_context_impression-finetune.jsonl   
+mimic_inspired_val_context_impression-finetune.jsonl
+mimic_inspired_train_context_impression-finetune.jsonl
+
+1_run_knn_saver.ipynb : Script that calls run_clm_chat.py and the retomaton.py and knnlm.py wrappers to generate a datastore. 
+2_build_faiss_index.ipynb : Script that builds faiss index for retrieval based language modelling using the datastore built in step 1.
+3_run_generations.ipynb : runs text generation with the retrieval-based LM approach and the externally created FAISS Datastore. 
+
+----
+
+# 📦 1. Environment Setup for HPC Cluster Workflow
 
 The `env_config/` folder provides **three Conda environments**, each dedicated to a specific stage of the workflow.
 
@@ -36,7 +65,7 @@ knnlm.py (Knnlm wrapper, which retomaton depends on)
 
 run_clm_chat.py (Modified template for causal language modelling with retomaton and knnlm, using the Hugging Face template)
 
-4_generations_perplexity_debug.py : Runs text generations for base models, retomaton and finetuned models and computex perplexity scores.
+4_generations_perplexity_debug3.py : Runs text generations for base models, retomaton and finetuned models and computex perplexity scores.
 
 5_all_metrics.py : Evaluation script comparing finetuning, next-token retrieval for different parameter combinations against base models (not finetuned or enhanced with knnlm and retomaton) with multiple benchmarks (reference and reference free).
 
