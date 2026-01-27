@@ -46,7 +46,7 @@ mimic_inspired_train_context_impression-finetune.jsonl
 
 ----
 
-# 📦 1. Environment Setup for HPC Cluster Workflow
+# 📦 4. Environment Setup for HPC Cluster Workflow
 
 The `env_config/` folder provides **three Conda environments**, each dedicated to a specific stage of the workflow.
 
@@ -55,7 +55,7 @@ The `env_config/` folder provides **three Conda environments**, each dedicated t
 3. neubig_instruct_environment.yml (for next-token retrieval)
 
 
-# 2. hpc_workflow: Core Scripts
+# 5. hpc_workflow: Core Scripts
 
 The ./core_scripts folder doesn't need to be modified. Important files include:
 
@@ -70,7 +70,7 @@ run_clm_chat.py (Modified template for causal language modelling with retomaton 
 5_all_metrics.py : Evaluation script comparing finetuning, next-token retrieval for different parameter combinations against base models (not finetuned or enhanced with knnlm and retomaton) with multiple benchmarks (reference and reference free).
 
 
-# 3. hpc_workflow: Bash Files
+# 6. hpc_workflow: Bash Files
 
 run steps 0-5.bash in sequence
 
@@ -85,13 +85,6 @@ run steps 0-5.bash in sequence
 4_run_generations_debug.bash : Generate outputs for retomaton, base models and finetuned models from previous steps
 
 5_run_all_metrics.bash : Evaluate models based on ROUGE-L scores, Perplexity, Hallucination Metrics etc. 
-
-
-# 4. Colab files folder:
-
-Version of the workflow to run on google collab pro+ if environment setup on HPC cluster is difficult. The notebooks use high RAM and 1 L40 NVIDIA-GPU (paid version). The colab version of the code uses FAISS-CPU as FAISS-GPU has set-up problems. 
-
-To run this part, just download the ./colab_files subfolder and upload it to your local google drive. Then, with your file paths it can be ran through colab high RAM + GPU notebooks. Connection to Google Drive must be enabled. 
 
 # 5. Citations & Accreditations: 
 

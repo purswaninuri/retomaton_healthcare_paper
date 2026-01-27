@@ -1,7 +1,0 @@
-Placeholder, directory should look like this after running step 3. Not included due to large file size. 
-
-
-chat_template.jinja          generation_config.json   tokenizer_config.json
-checkpoint-500               model.safetensors        tokenizer.json
-config.json                  README.md                training_args.bin
-finetuned_model_weights.txt  special_tokens_map.json
