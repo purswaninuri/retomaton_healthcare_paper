@@ -16,11 +16,11 @@ The workflow is optimized for **clinical NLP**, **privacy-preserving modeling**,
 
 ---
 
-# 0. Pre-requisite: Dataset Downloads from Physionet
+## 0. Pre-requisite: Dataset Downloads from Physionet
 
 Further details on how to access datasets needed for training. 
 
-# 1. Core Scripts (colab workflow) ./colab_workflow/core_scripts: 
+## 1. Core Scripts (colab workflow) ./colab_workflow/core_scripts: 
 
 The ./core_scripts folder doesn't need to be modified. Important files include:
 
@@ -32,7 +32,7 @@ run_clm_chat.py (Modified template for causal language modelling with retomaton 
 
 4_generations_perplexity_debug3.py : Runs text generations for base models, retomaton and finetuned models and computex perplexity scores.
 
-# 2. Execution Scripts (colab workflow) ./colab_workflow/execution_scripts:
+## 2. Execution Scripts (colab workflow) ./colab_workflow/execution_scripts:
 
 ./mock_datasets_radiology_jsonl/ folder: should contain files accessed in step 0. from Physionet in the correct prompt template and format. Specifically, need files: 
 
@@ -46,7 +46,7 @@ mimic_inspired_train_context_impression-finetune.jsonl
 
 ----
 
-# 📦 4. Environment Setup for HPC Cluster Workflow
+## 3. Environment Setup for HPC Cluster Workflow
 
 The `env_config/` folder provides **three Conda environments**, each dedicated to a specific stage of the workflow.
 
@@ -55,7 +55,7 @@ The `env_config/` folder provides **three Conda environments**, each dedicated t
 3. neubig_instruct_environment.yml (for next-token retrieval)
 
 
-# 5. hpc_workflow: Core Scripts
+## 4. hpc_workflow: Core Scripts
 
 The ./core_scripts folder doesn't need to be modified. Important files include:
 
@@ -70,7 +70,7 @@ run_clm_chat.py (Modified template for causal language modelling with retomaton 
 5_all_metrics.py : Evaluation script comparing finetuning, next-token retrieval for different parameter combinations against base models (not finetuned or enhanced with knnlm and retomaton) with multiple benchmarks (reference and reference free).
 
 
-# 6. hpc_workflow: Bash Files
+## 5. hpc_workflow: Bash Files
 
 run steps 0-5.bash in sequence
 
@@ -86,7 +86,7 @@ run steps 0-5.bash in sequence
 
 5_run_all_metrics.bash : Evaluate models based on ROUGE-L scores, Perplexity, Hallucination Metrics etc. 
 
-# 5. Citations & Accreditations: 
+## 6. Citations & Accreditations: 
 
 This code was based on prior work from Alon et al. and Khandelwal et al. 
 
