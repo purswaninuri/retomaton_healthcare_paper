@@ -18,7 +18,13 @@ The workflow is optimized for **clinical NLP**, **privacy-preserving modeling**,
 
 ## 0. Pre-requisite: Dataset Downloads from Physionet
 
-Further details on how to access datasets needed for training. 
+Log into Physionet and download datasets under the Dummy Datasets Folder:
+
+mimic_inspired_test_context_impression-finetune.jsonl   
+mimic_inspired_val_context_impression-finetune.jsonl
+mimic_inspired_train_context_impression-finetune.jsonl
+
+Copy and paste them into ./
 
 ## 1. Core Scripts (colab workflow) ./colab_workflow/core_scripts: 
 
