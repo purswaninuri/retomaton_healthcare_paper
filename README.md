@@ -28,15 +28,41 @@ The workflow is optimized for **clinical NLP**, **privacy-preserving modeling**,
 
 ---
 
-## 0. Pre-requisite: Dataset Downloads from Physionet
+## 0. Pre-requisite: Dataset Downloads from Physionet (URL to be Updated upon approval)
 
-Log into Physionet and download datasets under the Dummy Datasets Folder:
+Log into Physionet and download datasets inside the Dummy_Data_Github folder:
+
+<img width="693" height="619" alt="image" src="https://github.com/user-attachments/assets/fbb6c7fb-65dc-43c6-9fbb-961ee81e81c0" />
+
+Ready to use files with applied chat template are here (they can be used for retrieval and finetuning): 
 
 mimic_inspired_test_context_impression-finetune.jsonl   
 mimic_inspired_val_context_impression-finetune.jsonl
 mimic_inspired_train_context_impression-finetune.jsonl
 
-Copy and paste them into ./
+To run these on google colab ->
+
+Copy and paste them into the folder: /retomaton_healthcare_paper/colab_workflow/execution_scripts/mock_datasets_radiology_jsonl/
+
+To run these on an HPC cluster ->
+
+Copy and paste the files below into folder: /retomaton_healthcare_paper/hpc_workflow/dummy_datasets/
+
+(The .csv files are needed to apply the chat template prior)
+mimic_inspired_test_context_impression-finetune.jsonl   
+mimic_inspired_val_context_impression-finetune.jsonl
+mimic_inspired_train_context_impression-finetune.jsonl
+mimic_inspired_test_context_impression.csv  
+mimic_inspired_val_context_impression.csv
+mimic_inspired_train_context_impression.csv
+
+To re-create the full index from the paper (use HPC cluster with at least 1 40 GB NVDIA GPU, and 150 GB RAM):  -->
+
+Copy and paste the files below (obtained from physionet ./Index_Creation_Files/subsampled_datasets/) into this folder: /retomaton_healthcare_paper/hpc_workflow/dummy_datasets/
+
+test_10p.csv
+train_10p.csv
+val_10p.csv
 
 ## 1. Core Scripts (colab workflow) ./colab_workflow/core_scripts: 
 
