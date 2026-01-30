@@ -1,9 +1,12 @@
-# 🔍 Next-Token Retrieval for Clinical Language Modeling  
+# Privacy-Preserving Retrieval for Auditable Clinical Language Modeling on Real-World Radiology Data 
+
 kNN-LM • RETOMATON • FAISS Datastores • Instruction-Tuned Models
 
-Consolidated Repository of Experiments for Retrieval-based Language Model using the Retomaton &amp; KNNLM Models. Synthetic radiology notes provided as an example derived from the MIMIC IV Dataset, generated using ChatGPT 5.2 - datasets can be downloaded from Physionet. 
+Consolidated Repository of Experiments for Retrieval-based Language Modelling using the Retomaton &amp; KNNLM Models. Dummy radiology notes provided as an example derived from the MIMIC IV Dataset [1], datasets can be downloaded from Physionet (URL still under review by Physionet [2]):
 
-The original code for next token retrieval is here, we have adapted it: https://github.com/neulab/knn-transformers 
+Purswani, N., Schlegel, V. & Bharath, A. A. Privacy-preserving retrieval for auditable clinical language modeling on real-world radiology data (version 1.0). PhysioNet Dataset (2026). https://doi.org/10.13026/***** (Full URL to be updated upon dataset approval, currently under review by Physionet authors)
+
+The original code for retrieval-based language models is here, we have adapted it from Khandelwal, Alon et al.[3-5]: https://github.com/neulab/knn-transformers 
 
 This repository contains all scripts, environments, and utilities required to:
 - build FAISS-based datastores from clinical notes  
@@ -11,8 +14,17 @@ This repository contains all scripts, environments, and utilities required to:
 - fine-tune instruction-tuned models  
 - extract hidden states for large-scale datastore construction  
 
-The workflow is optimized for **clinical NLP**, **privacy-preserving modeling**, and **non-parametric adaptation** using external memory instead of weight updates.
+The workflow is optimized for **clinical NLP**, **privacy-preserving modeling**, and **non-parametric adaptation** using external memory instead of weight updates. The authors have submitted a paper for review and will make the pre-print available through github once it's uploaded. 
 
+[1] Johnson, A. E. W. et al. MIMIC-IV, a freely accessible electronic health record dataset. Sci. Data 10, 1 (2023). https://doi.org/10.1038/s41597-022-01899-x 
+
+[2] Goldberger, A. L. et al. PhysioBank, PhysioToolkit, and PhysioNet: Components of a New Research Resource for Complex Physiologic Signals. Circulation 101, e215–e220 (2000). https://doi.org/10.1161/01.cir.101.23.e215
+
+[3] Khandelwal, U., et al. Generalization through memorization: nearest neighbor language models. In International Conference on Learning Representations (ICLR) (2020). https://doi.org/10.48550/arXiv.1911.00172
+
+[4] Khandelwal, U., et al. Nearest neighbor machine translation. In International Conference on Learning Representations (ICLR) (2021). https://doi.org/10.48550/arXiv.2010.00710
+
+[5] Alon, U. et al. Neuro-symbolic language modeling with automaton-augmented retrieval. In ICML Workshop on Knowledge-Driven Representation Learning for Machine Learning (KRLM) (2022). https://doi.org/10.48550/arXiv.2201.12431
 
 ---
 
