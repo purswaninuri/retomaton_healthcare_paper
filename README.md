@@ -2,7 +2,7 @@
 
 kNN-LM • RETOMATON • FAISS Datastores • Instruction-Tuned Models
 
-Consolidated Repository of Experiments for Retrieval-based Language Modelling using the Retomaton &amp; KNNLM Models. Dummy radiology notes provided as an example derived from the MIMIC IV Dataset [1], datasets can be downloaded from Physionet (URL still under review by Physionet [2]):
+Consolidated Repository of Experiments for Retrieval-based Language Modelling using the Retomaton &amp; KNNLM Models. Dummy radiology notes are derived from the MIMIC IV Dataset [1], full datasets and dummy radiology notes can be downloaded from Physionet (URL still under review by Physionet [2]):
 
 Purswani, N., Schlegel, V. & Bharath, A. A. Privacy-preserving retrieval for auditable clinical language modeling on real-world radiology data (version 1.0). PhysioNet Dataset (2026). https://doi.org/10.13026/***** (Full URL to be updated upon dataset approval, currently under review by Physionet authors)
 
