@@ -9,10 +9,10 @@ Purswani, N., Schlegel, V. & Bharath, A. A. Privacy-preserving retrieval for aud
 The original code for retrieval-based language models is here, we have adapted it from Khandelwal, Alon et al.[3-5]: https://github.com/neulab/knn-transformers 
 
 This repository contains all scripts, environments, and utilities required to:
-- build FAISS-based datastores from clinical radiology notes  
-- run kNN-LM and RETOMATON for domain adaptation of models with next-token retrieval evaluation  
-- fine-tune instruction-tuned models on clinical radiology notes
-- extract hidden states for large-scale datastore construction  
+- Build FAISS-based datastores from clinical radiology notes  
+- Run kNN-LM and RETOMATON for domain adaptation of models with next-token retrieval evaluation  
+- Fine-tune instruction-tuned models on clinical radiology notes
+- Extract hidden states for large-scale datastore construction  
 
 The workflow is optimized for **clinical NLP**, **privacy-preserving modeling**, and **non-parametric adaptation** using external memory instead of weight updates. The authors have submitted a paper for review and will make the pre-print available through github once it's uploaded. 
 
